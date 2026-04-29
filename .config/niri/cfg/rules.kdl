@@ -1,0 +1,59 @@
+window-rule {
+  geometry-corner-radius 15 // Set every window radius to 20
+  clip-to-geometry true
+  draw-border-with-background false
+  background-effect {
+    blur true
+    xray false
+  }
+  shadow {
+    on
+    softness 40
+    spread 5
+    offset x=5 y=5
+    draw-behind-window false
+    color "#00000064"
+  }
+}
+
+  // if you use steam you will probably like these
+window-rule {
+  match app-id="steam"
+  exclude title=r#"^[Ss]team$"#
+  open-floating true
+}
+
+ // zen
+window-rule {
+  match app-id="zen"
+  open-maximized true
+}
+window-rule {
+  // this app-id regular expression will work for both:
+  // - host firefox (app-id is "firefox")
+  // - flatpak firefox (app-id is "org.mozilla.firefox")
+  match app-id=r#"zen"# title="Картинка в картинке"
+  open-floating true
+}
+
+
+
+
+window-rule {
+  match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
+  default-floating-position x=10 y=10 relative-to="bottom-right"
+  open-focused false
+}
+
+layer-rule {
+  match namespace="^noctalia-wallpaper*"
+  place-within-backdrop true
+}
+
+blur {
+  // off
+  passes 3
+  offset 2
+  noise 0.01
+  saturation 1.5
+}

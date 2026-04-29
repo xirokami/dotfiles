@@ -1,0 +1,24 @@
+gestures {
+  hot-corners{
+    off
+  }
+}
+input {
+    keyboard {
+xkb {
+  layout "us,ru"
+  options "grp:caps_toggle"
+  }
+    numlock
+  }
+  touchpad {
+    tap
+    natural-scroll 
+    scroll-factor 0.25
+  }
+  mouse {
+    accel-speed -1
+  }
+  //focus-follows-mouse
+  workspace-auto-back-and-forth
+}

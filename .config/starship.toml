@@ -1,0 +1,104 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+ [](surface0)\
+$directory\
+[](bg:pink fg:surface0)\
+$git_branch\
+$git_status\
+[](bg:sky fg:pink)\
+$nodejs\
+$golang\
+[](bg:blue fg:sky)\
+$kubernetes\
+[](fg:blue)
+  [❯ ](fg:blue)\
+""" 
+
+palette = 'catppuccin_mocha'
+
+[directory]
+style = 'bg:surface0'
+format = '[$path ]($style)[$read_only]($style)'
+read_only = '󰌾 '
+
+[git_branch]
+format = '[  $branch]($style)'
+style = 'bg:pink fg:surface0'
+
+[git_status]
+format = '[ $all_status$ahead_behind ]($style)'
+style = 'bg:pink fg:surface0'
+
+[nodejs]
+disabled = false
+format = '[ $symbol$version ](bg:sky fg:surface0)'
+detect_files = ['package.json']
+
+[golang]
+disabled = false
+symbol = " "
+format = '[ $symbol$version ]($style)'
+detect_folders = ['Godeps']
+style = 'bg:sky fg:surface0'
+
+[kubernetes]
+disabled = false
+format = '[ $symbol$context ]($style)'
+style = 'bg:blue fg:surface0'
+
+[palettes.tokyo_night]  # Название изменено, чтобы отразить новую тему
+rosewater = "#c0caf5"   # заменен на text (основной текст)
+flamingo = "#bb9af7"    # заменен на comment (фиолетовый)
+pink = "#bb9af7"        # заменен на text (используется как нейтральный)
+mauve = "#bb9af7"       # заменен на comment (основной фиолетовый)
+red = "#f7768e"         # красный Tokyo Night
+maroon = "#db4b4b"      # более темный/приглушенный красный (взят из extended)
+peach = "#ff9e64"       # оранжевый Tokyo Night
+yellow = "#e0af68"      # желтый Tokyo Night
+green = "#9ece6a"       # зеленый Tokyo Night
+teal = "#7dcfff"        # заменен на cyan (бирюзово-голубой)
+sky = "#c0caf5"         # заменен на blue (основной синий)
+sapphire = "#7aa2f7"    # также синий (для вариативности)
+blue = "#7aa2f7"        # синий Tokyo Night
+lavender = "#bb9af7"    # фиолетовый (как в mauve/comment)
+text = "#c0caf5"        # основной текст Tokyo Night
+subtext1 = "#a9b1d6"    # чуть темнее текста
+subtext0 = "#9aa5ce"    # еще темнее
+overlay2 = "#787c99"    # серый (из комментариев)
+overlay1 = "#565a7e"    # темно-серый
+overlay0 = "#3d4166"    # очень темный серый
+surface2 = "#2d2f48"    # поверхность (светлая часть фона)
+surface1 = "#24263b"    # поверхность
+surface0 = "#1f2335"    # поверхность (основной фон редактора)
+base = "#1a1b2c"        # базовый фон (темнее editor)
+mantle = "#16161e"      # "мантия" (фон боковых панелей)
+crust = "#0f0f14"       # "корка" (самый темный)
+
+[palettes.catppuccin_mocha]
+rosewater = "#f5e0dc"
+flamingo = "#f2cdcd"
+pink = "#f5c2e7"
+mauve = "#cba6f7"
+red = "#f38ba8"
+maroon = "#eba0ac"
+peach = "#fab387"
+yellow = "#f9e2af"
+green = "#a6e3a1"
+teal = "#94e2d5"
+sky = "#89dceb"
+sapphire = "#74c7ec"
+blue = "#89b4fa"
+lavender = "#b4befe"
+text = "#cdd6f4"
+subtext1 = "#bac2de"
+subtext0 = "#a6adc8"
+overlay2 = "#9399b2"
+overlay1 = "#7f849c"
+overlay0 = "#6c7086"
+surface2 = "#585b70"
+surface1 = "#45475a"
+surface0 = "#313244"
+base = "#1e1e2e"
+mantle = "#181825"
+crust = "#11111b"
