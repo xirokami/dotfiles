@@ -11,11 +11,12 @@ $nodejs\
 $golang\
 [](bg:blue fg:sky)\
 $kubernetes\
+$python\
 [](fg:blue)
   [❯ ](fg:blue)\
 """ 
 
-palette = 'catppuccin_mocha'
+palette = 'tokyo_night'
 
 [directory]
 style = 'bg:surface0'
@@ -34,6 +35,11 @@ style = 'bg:pink fg:surface0'
 disabled = false
 format = '[ $symbol$version ](bg:sky fg:surface0)'
 detect_files = ['package.json']
+
+[python]
+format = '[ ${symbol}${pyenv_prefix}]($style)([$virtualenv]($style))'
+symbol = " "
+style = 'bg:blue fg:surface0'
 
 [golang]
 disabled = false

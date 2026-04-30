@@ -326,6 +326,17 @@
                         "videoSource": "portal"
                     },
                     "id": "plugin:screen-recorder"
+                },
+                {
+                    "enableOnStateLogic": true,
+                    "generalTooltipText": "",
+                    "icon": "heart",
+                    "id": "CustomButton",
+                    "onClicked": "",
+                    "onMiddleClicked": "",
+                    "onRightClicked": "",
+                    "showExecTooltip": true,
+                    "stateChecksJson": "[]"
                 }
             ]
         }
@@ -355,7 +366,7 @@
         "deadOpacity": 0.6,
         "displayMode": "auto_hide",
         "dockType": "floating",
-        "enabled": true,
+        "enabled": false,
         "floatingRatio": 1,
         "groupApps": false,
         "groupClickAction": "cycle",
@@ -373,6 +384,7 @@
         ],
         "onlySameOutput": true,
         "pinnedApps": [
+            "kitty"
         ],
         "pinnedStatic": false,
         "position": "bottom",
@@ -392,7 +404,7 @@
         "clockFormat": "hh\\nmm",
         "clockStyle": "custom",
         "compactLockScreen": true,
-        "dimmerOpacity": 0.1,
+        "dimmerOpacity": 0.15,
         "enableBlurBehind": true,
         "enableLockScreenCountdown": true,
         "enableLockScreenMediaControls": false,

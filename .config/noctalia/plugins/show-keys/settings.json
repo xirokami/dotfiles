@@ -1,5 +1,5 @@
 {
-  "captureEnabled": true,
+  "captureEnabled": false,
   "evtestDevice": "/dev/input/event3",
   "position": "bottom",
   "marginPx": 60,

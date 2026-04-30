@@ -1,5 +1,6 @@
 if status is-interactive
     set -g fish_greeting ''
+    set -g -x PIP_REQUIRE_VIRTUALENV true
     alias n='nvim'
     alias ls='lsd'
     alias l='lsd -l'

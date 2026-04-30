@@ -7,7 +7,7 @@ binds {
     // ─── Applications ───
     Mod+T                               hotkey-overlay-title="Open Terminal: kitty" { spawn "kitty"; }
     Mod+Space                           hotkey-overlay-title="Open App Launcher: noctalia launcher" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
-    Mod+W                               hotkey-overlay-title="Open Browser: firefox" { spawn "zen-browser"; }
+    //Mod+W                               hotkey-overlay-title="Open Browser: firefox" { spawn "zen-browser"; }
     Mod+ALT+L                           hotkey-overlay-title="Lock Screen: noctalia lock" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
     Mod+Shift+Q                         hotkey-overlay-title="Session Menu: noctalia sessionMenu" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
 
@@ -105,6 +105,7 @@ binds {
     // ─── Layout Controls ───
     //Mod+D                               { expand-column-to-available-width; }
     Mod+C                               { center-column; }
+    Mod+B                               { do-screen-transition delay-ms=500;}
     Mod+CTRL+C                          { center-visible-columns; }
     Mod+Minus                           { set-column-width "-10%"; }
     Mod+Equal                           { set-column-width "+10%"; }
@@ -115,7 +116,7 @@ binds {
     Mod+V                               { toggle-window-floating; }
     Mod+F                               { fullscreen-window; }
     Mod+D                               { maximize-column;}
-    // Mod+W                               { toggle-column-tabbed-display; }
+    Mod+W                               { toggle-column-tabbed-display; }
     
     // ─── Screenshots ───
     Mod+SHIFT+S                         { screenshot; }
