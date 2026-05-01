@@ -6,7 +6,7 @@
         "clipboardWrapText": true,
         "customLaunchPrefix": "",
         "customLaunchPrefixEnabled": false,
-        "density": "comfortable",
+        "density": "default",
         "enableClipPreview": true,
         "enableClipboardChips": true,
         "enableClipboardHistory": true,
@@ -16,7 +16,7 @@
         "enableWindowsSearch": true,
         "iconMode": "native",
         "ignoreMouseInput": false,
-        "overviewLayer": false,
+        "overviewLayer": true,
         "pinnedApps": [
         ],
         "position": "follow_bar",
@@ -25,7 +25,7 @@
         "showIconBackground": false,
         "sortByMostUsed": true,
         "terminalCommand": "kitty -e",
-        "viewMode": "list"
+        "viewMode": "grid"
     },
     "audio": {
         "mprisBlacklist": [
@@ -79,8 +79,8 @@
         "widgets": {
             "center": [
                 {
-                    "clockColor": "none",
-                    "customFont": "",
+                    "clockColor": "secondary",
+                    "customFont": "DejaVu Math TeX Gyre",
                     "formatHorizontal": "HH:mm ddd, MMM dd",
                     "formatVertical": "HH mm - dd MM",
                     "id": "Clock",
@@ -91,7 +91,7 @@
             "left": [
                 {
                     "characterCount": 2,
-                    "colorizeIcons": false,
+                    "colorizeIcons": true,
                     "emptyColor": "secondary",
                     "enableScrollWheel": true,
                     "focusedColor": "primary",
@@ -113,7 +113,7 @@
                 {
                     "compactMode": true,
                     "diskPath": "/",
-                    "iconColor": "none",
+                    "iconColor": "primary",
                     "id": "SystemMonitor",
                     "showCpuCores": false,
                     "showCpuFreq": false,
@@ -326,17 +326,6 @@
                         "videoSource": "portal"
                     },
                     "id": "plugin:screen-recorder"
-                },
-                {
-                    "enableOnStateLogic": true,
-                    "generalTooltipText": "",
-                    "icon": "heart",
-                    "id": "CustomButton",
-                    "onClicked": "",
-                    "onMiddleClicked": "",
-                    "onRightClicked": "",
-                    "showExecTooltip": true,
-                    "stateChecksJson": "[]"
                 }
             ]
         }
@@ -384,7 +373,6 @@
         ],
         "onlySameOutput": true,
         "pinnedApps": [
-            "kitty"
         ],
         "pinnedStatic": false,
         "position": "bottom",
@@ -404,7 +392,7 @@
         "clockFormat": "hh\\nmm",
         "clockStyle": "custom",
         "compactLockScreen": true,
-        "dimmerOpacity": 0.15,
+        "dimmerOpacity": 0.1,
         "enableBlurBehind": true,
         "enableLockScreenCountdown": true,
         "enableLockScreenMediaControls": false,
@@ -646,12 +634,12 @@
         "batteryWarningThreshold": 20,
         "cpuCriticalThreshold": 90,
         "cpuWarningThreshold": 80,
-        "criticalColor": "",
+        "criticalColor": "#f7768e",
         "diskAvailCriticalThreshold": 10,
         "diskAvailWarningThreshold": 20,
         "diskCriticalThreshold": 90,
         "diskWarningThreshold": 80,
-        "enableDgpuMonitoring": false,
+        "enableDgpuMonitoring": true,
         "externalMonitor": "resources || missioncenter || jdsystemmonitor || corestats || system-monitoring-center || gnome-system-monitor || plasma-systemmonitor || mate-system-monitor || ukui-system-monitor || deepin-system-monitor || pantheon-system-monitor",
         "gpuCriticalThreshold": 90,
         "gpuWarningThreshold": 80,
@@ -661,8 +649,8 @@
         "swapWarningThreshold": 80,
         "tempCriticalThreshold": 90,
         "tempWarningThreshold": 80,
-        "useCustomColors": false,
-        "warningColor": ""
+        "useCustomColors": true,
+        "warningColor": "#9ece6a"
     },
     "templates": {
         "activeTemplates": [
@@ -753,7 +741,7 @@
                 "wallpaper": ""
             }
         ],
-        "overviewBlur": 0.4,
+        "overviewBlur": 0,
         "overviewEnabled": false,
         "overviewTint": 0.6,
         "panelPosition": "follow_bar",

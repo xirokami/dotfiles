@@ -1,8 +1,8 @@
 {
-  "captureEnabled": false,
-  "evtestDevice": "/dev/input/event3",
+  "captureEnabled": true,
+  "evtestDevice": "/dev/input/event23",
   "position": "bottom",
-  "marginPx": 60,
+  "marginPx": 100,
   "hideDelaySec": 2,
   "disabledScreens": [],
   "useCustomColors": false
