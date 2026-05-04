@@ -16,7 +16,7 @@
         "enableWindowsSearch": true,
         "iconMode": "native",
         "ignoreMouseInput": false,
-        "overviewLayer": true,
+        "overviewLayer": false,
         "pinnedApps": [
         ],
         "position": "follow_bar",
@@ -56,8 +56,8 @@
         "hideOnOverview": false,
         "marginHorizontal": 4,
         "marginVertical": 4,
-        "middleClickAction": "launcherPanel",
-        "middleClickCommand": "",
+        "middleClickAction": "command",
+        "middleClickCommand": "niri msg action toggle-overview",
         "middleClickFollowMouse": true,
         "monitors": [
         ],
@@ -160,21 +160,6 @@
                     "id": "Tray",
                     "pinned": [
                     ]
-                },
-                {
-                    "defaultSettings": {
-                        "autoHeight": true,
-                        "cheatsheetData": [
-                        ],
-                        "columnCount": 3,
-                        "detectedCompositor": "",
-                        "hyprlandConfigPath": "~/.config/hypr/hyprland.conf",
-                        "modKeyVariable": "$mod",
-                        "niriConfigPath": "~/.config/niri/config.kdl",
-                        "windowHeight": 0,
-                        "windowWidth": 1400
-                    },
-                    "id": "plugin:keybind-cheatsheet"
                 },
                 {
                     "deviceNativePath": "BAT0",

@@ -5,7 +5,7 @@
 # ============================================
 
 # Настройки
-VIDEO_DIR="$HOME/Video/"             # Директория для сохранения
+VIDEO_DIR="$HOME/Videos/"            # Директория для сохранения
 BUFFER_SEC=300                       # Длительность буфера (сек)
 FPS=60                               # Частота кадров
 QUALITY="high"                       # quality, balanced, performance
@@ -25,9 +25,6 @@ start_replay() {
   if is_recording; then
     return 1
   fi
-
-  echo "▶️ Запуск replay buffer (${BUFFER_SEC} сек)..."
-
   notify-send -t 2000 "Replay запущен"
   gpu-screen-recorder \
     -w "$SOURCE" \
@@ -43,7 +40,7 @@ start_replay() {
 # Сохранение 1 мин
 save_replay_a() {
   if ! is_recording; then
-    notify-send -t 2000 '❌ Replay Buffer неактивна'
+    notify-send -u critical -t 2000 '❌ Replay Buffer неактивна'
     return 1
   fi
 
@@ -60,18 +57,16 @@ save_replay_b() {
     notify-send -t 2000 '❌ Replay Buffer неактивна'
     return 1
   fi
-
   local filename="~/Video/$(niri msg focused-window | grep 'App ID' | cut -d '"' -f 2)-$(date +%Y-%m-%d_%H-%M-%S).mp4"
-  # Сигнал для сохранения буфера
   pkill -SIGRTMIN+4 -f "gpu-screen-recorder"
-
   notify-send -t 2000 "Replay 5мин сохранен: $filename"
 }
+
 # Остановка
 stop_replay() {
   if is_recording; then
     pkill -SIGINT -f "gpu-screen-recorder"
-    notify-send -t 2000 "Replay остановлен"
+    notify-send -u critical -t 2000 "Replay остановлен"
   fi
 }
 restart() {
@@ -79,6 +74,7 @@ restart() {
   sleep 1
   start_replay
 }
+
 # Использование
 case "$1" in
 start)

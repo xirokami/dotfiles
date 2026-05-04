@@ -4,12 +4,11 @@ gestures {
   }
 }
 input {
-    keyboard {
-xkb {
-  layout "us,ru"
-  options "grp:caps_toggle"
-  }
-    numlock
+  keyboard {
+    xkb {
+      layout "us,ru"
+      options "grp:caps_toggle"
+    }
   }
   touchpad {
     tap
