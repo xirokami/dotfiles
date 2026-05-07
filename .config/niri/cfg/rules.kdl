@@ -1,5 +1,5 @@
 window-rule {
-  geometry-corner-radius 15 // Set every window radius to 20
+  geometry-corner-radius 15
   clip-to-geometry true
   draw-border-with-background false
   background-effect {
@@ -8,11 +8,11 @@ window-rule {
   }
   shadow {
     on
-    softness 40
-    spread 5
-    offset x=5 y=5
+    softness 50
+    spread 1
+    offset x=0 y=0
     draw-behind-window false
-    color "#00000064"
+    color "#7aa2f7"
   }
 }
 
@@ -23,7 +23,7 @@ window-rule {
   open-floating true
 }
 
- // zen
+// zen
 window-rule {
   match app-id="zen"
   open-maximized true
