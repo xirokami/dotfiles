@@ -1,0 +1,78 @@
+@import url("colors.css");
+
+* {
+  border: none;
+  border-radius: 0px;
+  font-family: "JetBrains Mono";
+  font-weight: bold;
+  font-size: 16px;
+  min-height: 0;
+  color: @fg;
+  margin: 0;
+  padding: 0;
+}
+
+window#waybar {
+  background: @bg;
+  border: 4px solid @blue;
+  border-top: 0;
+}
+
+/* Workspace Buttons */
+#workspaces button label{
+  padding: 0 20px 4px 20px;
+}
+
+#workspaces button.active label {
+  color: @bg;
+}
+
+#workspaces button:hover {
+  background: @hover_bg;
+}
+
+#workspaces button.active {
+  background: @blue;
+}
+
+#clock, #battery, #pulseaudio, #tray, #language, #weather {
+  padding: 0 10px;
+}
+
+#language {
+  color: @yellow;
+  border-bottom: 5px solid @yellow;
+}
+
+#pulseaudio {
+  color: @aqua;
+  border-bottom: 5px solid @aqua;
+}
+
+#pulseaudio.muted {
+  padding: 0 20px;
+  color: @red;
+  border-bottom: 5px solid @red;
+}
+
+#battery {
+  color: @orange;
+  border-bottom: 5px solid @orange;
+}
+
+#clock {
+  color: @purple;
+  border-bottom: 5px solid @purple;
+}
+
+#tray {
+  color: @orange;
+  border-bottom: 5px solid @blue;
+}
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "Sans", "Font Awesome 6 Free";
+    font-size: 13px;
+    min-height: 0;
+}

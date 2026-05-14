@@ -40,12 +40,12 @@
         "volumeStep": 5
     },
     "bar": {
-        "autoHideDelay": 500,
+        "autoHideDelay": 1000,
         "autoShowDelay": 150,
         "backgroundOpacity": 0,
         "barType": "floating",
         "capsuleColorKey": "none",
-        "capsuleOpacity": 0,
+        "capsuleOpacity": 0.67,
         "contentPadding": 2,
         "density": "comfortable",
         "displayMode": "always_visible",
@@ -55,7 +55,7 @@
         "frameThickness": 8,
         "hideOnOverview": false,
         "marginHorizontal": 4,
-        "marginVertical": 4,
+        "marginVertical": 10,
         "middleClickAction": "command",
         "middleClickCommand": "niri msg action toggle-overview",
         "middleClickFollowMouse": true,
@@ -79,7 +79,7 @@
         "widgets": {
             "center": [
                 {
-                    "clockColor": "secondary",
+                    "clockColor": "primary",
                     "customFont": "DejaVu Math TeX Gyre",
                     "formatHorizontal": "HH:mm ddd, MMM dd",
                     "formatVertical": "HH mm - dd MM",
@@ -480,7 +480,7 @@
         "bluetoothRssiPollIntervalMs": 60000,
         "bluetoothRssiPollingEnabled": false,
         "disableDiscoverability": false,
-        "networkPanelView": "ethernet",
+        "networkPanelView": "wifi",
         "wifiDetailsViewMode": "grid"
     },
     "nightLight": {
@@ -700,7 +700,7 @@
         "fontDefaultScale": 1.03,
         "fontFixed": "JetBrainsMono NFM",
         "fontFixedScale": 1,
-        "panelBackgroundOpacity": 0,
+        "panelBackgroundOpacity": 0.67,
         "panelsAttachedToBar": true,
         "scrollbarAlwaysVisible": false,
         "settingsPanelMode": "attached",

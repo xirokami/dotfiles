@@ -1,13 +1,13 @@
 window-rule {
-  geometry-corner-radius 15
+  geometry-corner-radius 0
   clip-to-geometry true
   draw-border-with-background false
   background-effect {
-    blur true
-    xray false
+    blur false
+    xray true
   }
   shadow {
-    on
+    off
     softness 50
     spread 1
     offset x=0 y=0
@@ -46,12 +46,12 @@ window-rule {
 }
 
 layer-rule {
-  match namespace="^noctalia-wallpaper*"
+  match namespace="^wallpaper*"
   place-within-backdrop true
 }
 
 blur {
-  // off
+  off
   passes 3
   offset 2
   noise 0.01

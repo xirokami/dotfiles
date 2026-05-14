@@ -1,6 +1,13 @@
 {
   "colorHistory": [],
-  "paletteColors": [],
+  "paletteColors": [
+    "#363636",
+    "#A0A0A0",
+    "#D1D1D1",
+    "#E8E8E8",
+    "#F4F4F4",
+    "#F9F9F9"
+  ],
   "installedLangs": [
     "eng",
     "spa"
