@@ -55,7 +55,7 @@
         "frameThickness": 8,
         "hideOnOverview": false,
         "marginHorizontal": 4,
-        "marginVertical": 10,
+        "marginVertical": 4,
         "middleClickAction": "command",
         "middleClickCommand": "niri msg action toggle-overview",
         "middleClickFollowMouse": true,
@@ -383,7 +383,7 @@
         "enableLockScreenMediaControls": false,
         "enableShadows": true,
         "forceBlackScreenCorners": false,
-        "iRadiusRatio": 1,
+        "iRadiusRatio": 0.35000000000000003,
         "keybinds": {
             "keyDown": [
                 "Down"
@@ -417,7 +417,7 @@
         ],
         "lockScreenTint": 0,
         "passwordChars": true,
-        "radiusRatio": 1,
+        "radiusRatio": 0.35000000000000003,
         "reverseScroll": false,
         "scaleRatio": 1,
         "screenRadiusRatio": 1,
@@ -700,7 +700,7 @@
         "fontDefaultScale": 1.03,
         "fontFixed": "JetBrainsMono NFM",
         "fontFixedScale": 1,
-        "panelBackgroundOpacity": 0.67,
+        "panelBackgroundOpacity": 0.85,
         "panelsAttachedToBar": true,
         "scrollbarAlwaysVisible": false,
         "settingsPanelMode": "attached",
