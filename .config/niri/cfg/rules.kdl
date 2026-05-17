@@ -3,8 +3,8 @@ window-rule {
   clip-to-geometry true
   draw-border-with-background false
   background-effect {
-    blur false
-    xray true
+    blur true
+    xray false
   }
   shadow {
     off
@@ -29,10 +29,8 @@ window-rule {
   open-maximized true
 }
 window-rule {
-  // this app-id regular expression will work for both:
-  // - host firefox (app-id is "firefox")
-  // - flatpak firefox (app-id is "org.mozilla.firefox")
   match app-id=r#"zen"# title="Картинка в картинке"
+  match title="Servers"
   open-floating true
 }
 
@@ -46,12 +44,12 @@ window-rule {
 }
 
 layer-rule {
-  match namespace="^wallpaper*"
+  match namespace="^noctalia-wallpaper*"
   place-within-backdrop true
 }
 
 blur {
-  off
+  //off
   passes 3
   offset 2
   noise 0.01

@@ -14,6 +14,7 @@ function spf
 end
 
 alias n 'fg || nvim'
+alias ns niri-session
 alias q exit
 
 alias ls lsd

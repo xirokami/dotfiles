@@ -1,2 +1,2 @@
-spawn-sh-at-startup "waybar"
-spawn-sh-at-startup "swaybg -m fill -i Pictures/Wallpapers/138032536_p0.jpg"
+spawn-sh-at-startup "qs -c noctalia-shell -d"
+spawn-sh-at-startup "~/dotfiles/scripts/gsr.sh start"
