@@ -16,6 +16,7 @@ end
 alias n 'fg || nvim'
 alias ns niri-session
 alias q exit
+alias cd z
 
 alias ls lsd
 alias l "ls -l"
