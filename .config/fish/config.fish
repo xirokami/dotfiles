@@ -13,7 +13,7 @@ function spf
     end
 end
 
-alias n 'fg || nvim'
+abbr n "fg || nvim"
 alias ns niri-session
 alias q exit
 alias cd z
@@ -37,6 +37,7 @@ abbr ga "git add"
 abbr gb "git branch"
 abbr gch "git checkout"
 abbr gc "git commit -m"
+abbr gcl "git clone"
 abbr gd "git diff"
 abbr gf "git fetch"
 abbr gl "git log"
@@ -56,3 +57,6 @@ set -g fish_cursor_replace_one underscore
 
 # Vi key bindings
 # set -g fish_key_bindings fish_vi_key_bindings
+
+# Created by `pipx` on 2026-05-18 09:45:44
+set PATH $PATH /home/xiro/.local/bin

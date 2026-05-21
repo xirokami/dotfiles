@@ -1,2 +1,2 @@
-spawn-sh-at-startup "qs -c noctalia-shell -d"
+spawn-sh-at-startup "noctalia"
 spawn-sh-at-startup "~/dotfiles/scripts/gsr.sh start"
