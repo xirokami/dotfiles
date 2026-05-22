@@ -12,8 +12,7 @@ function spf
         rm -f -- "$spf_last_dir" >>/dev/null
     end
 end
-
-abbr n "fg || nvim"
+alias n nvim
 alias ns niri-session
 alias q exit
 alias cd z
