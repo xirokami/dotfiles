@@ -33,6 +33,7 @@ abbr jc journalctl
 
 abbr g git
 abbr ga "git add"
+abbr gac "git add . && git commit -m"
 abbr gb "git branch"
 abbr gch "git checkout"
 abbr gc "git commit -m"
@@ -48,6 +49,11 @@ abbr grm "git remote"
 abbr gs "git status"
 abbr gsh "git show"
 abbr gst "git stash"
+
+abbr w warp-cli
+abbr wc warp-cli connect
+abbr wd warp-cli disconnect
+abbr ws warp-cli status
 
 # Fix emoji and others rendering
 set -g fish_emoji_width 2
