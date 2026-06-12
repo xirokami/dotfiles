@@ -15,6 +15,7 @@ end
 alias n nvim
 alias ns niri-session
 alias q exit
+alias cdir cd
 alias cd z
 
 alias ls lsd

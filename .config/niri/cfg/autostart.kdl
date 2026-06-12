@@ -1,3 +1,2 @@
 spawn-sh-at-startup "noctalia"
-spawn-sh-at-startup "~/dotfiles/scripts/gsr.sh start"
-spawn-sh-at-startup "oniri -T -E"
+spawn-sh-at-startup "oniri -T"

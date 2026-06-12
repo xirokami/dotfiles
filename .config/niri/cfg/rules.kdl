@@ -4,16 +4,16 @@ window-rule {
   draw-border-with-background false
   background-effect {
     blur true
-    xray false
+    xray true
   }
-  shadow {
-    off
-    softness 50
-    spread 1
-    offset x=0 y=0
-    draw-behind-window false
-    color "#7aa2f7"
-  }
+}
+
+blur {
+  //off
+  passes 3
+  offset 3
+  noise 0.01
+  saturation 1
 }
 
   // if you use steam you will probably like these
@@ -46,12 +46,4 @@ window-rule {
 layer-rule {
   match namespace="^noctalia-wallpaper*"
   place-within-backdrop true
-}
-
-blur {
-  //off
-  passes 3
-  offset 2
-  noise 0.01
-  saturation 1.5
 }
