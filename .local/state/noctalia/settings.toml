@@ -1,0 +1,77 @@
+[bar.default]
+background_opacity = 0.0
+end = [ "tray", "spacer_2", "network", "bluetooth", "battery", "notifications" ]
+margin_edge = 0
+margin_ends = 0
+position = "left"
+radius = 0
+radius_top_left = 0
+start = [ "taskbar" ]
+
+[lockscreen_widgets]
+enabled = false
+schema_version = 2
+widget_order = [ "lockscreen-login-box@eDP-1" ]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
+    box_height = 0.0
+    box_width = 0.0
+    cx = 960.0
+    cy = 957.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        input_opacity = 1.0
+        input_radius = 6.0
+        show_login_button = true
+
+[shell]
+font_family = "JetBrains Mono NL"
+settings_show_advanced = true
+
+    [shell.panel]
+    transparency_mode = "glass"
+
+[theme]
+builtin = "Tokyo-Night"
+community_palette = "Tokyo Night Moon"
+
+    [theme.templates]
+    builtin_ids = [ "gtk3", "gtk4", "kcolorscheme", "kitty", "niri", "qt" ]
+    community_ids = [ "neovim" ]
+
+[wallpaper]
+directory = "/home/xiro/Pictures/Wallpapers"
+
+    [wallpaper.last]
+    path = "/home/xiro/Pictures/Wallpapers/wallhaven-4v9x35_2560x1440.png"
+
+    [wallpaper.monitors.eDP-1]
+    path = "/home/xiro/Pictures/Wallpapers/wallhaven-4v9x35_2560x1440.png"
+
+[widget.clock]
+format = "{:%H:%M - %d %m}"
+
+[widget.spacer_2]
+capsule_fill = "primary"
+type = "spacer"
+
+[widget.spacer_3]
+length = 0
+scale = 0.20000000000000001
+type = "spacer"
+
+[widget.taskbar]
+group_by_workspace = true
+hide_empty_workspaces = true
+show_workspace_label = false
