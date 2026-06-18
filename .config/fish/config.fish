@@ -27,9 +27,14 @@ alias mv "mv -i"
 
 alias c cargo
 alias cn "cargo +nightly"
-alias zapret='sudo bash ~/Public/zapret/zapret-discord-youtube-linux/service.sh'
+alias zapret='sudo bash ~/Public/zapret-discord-youtube-linux/service.sh'
+alias scw "systemctl start warp-svc.service && sleep 1 && warp-cli connect"
 
 abbr sc systemctl
+abbr scd systemctl disable
+abbr sce systemctl enable
+abbr scs systemctl start
+abbr scst systemctl stop
 abbr jc journalctl
 
 abbr g git

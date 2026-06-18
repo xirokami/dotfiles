@@ -1,5 +1,5 @@
 window-rule {
-  geometry-corner-radius 8
+  geometry-corner-radius 16
   clip-to-geometry true
   draw-border-with-background false
   background-effect {
@@ -13,7 +13,6 @@ blur {
   passes 3
   offset 3
   noise 0.01
-  saturation 1
 }
 
   // if you use steam you will probably like these
@@ -30,13 +29,22 @@ window-rule {
 }
 window-rule {
   match app-id=r#"zen"# title="Картинка в картинке"
-  match title="Servers"
   open-floating true
 }
 
 
 
+window-rule {
 
+    popups {
+        geometry-corner-radius 16
+        opacity 0.5
+
+        background-effect {
+            blur true
+        }
+    }
+}
 window-rule {
   match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
   default-floating-position x=10 y=10 relative-to="bottom-right"

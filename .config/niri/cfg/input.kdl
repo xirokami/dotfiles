@@ -13,7 +13,7 @@ input {
   touchpad {
     dwt
     tap
-    natural-scroll 
+    natural-scroll
     scroll-factor 0.25
   }
   mouse {

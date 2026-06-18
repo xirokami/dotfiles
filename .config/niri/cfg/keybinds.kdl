@@ -3,13 +3,14 @@ binds {
 
   // ─── Applications ───
   Mod+T                               { spawn "kitty"; }
-  Mod+Space                           { spawn-sh "noctalia msg panel-toggle launcher"; }
   Mod+B                               { spawn "zen-browser"; }
+
+  // ─── Noctalia ───
+  Mod+Space                           { spawn-sh "noctalia msg panel-toggle launcher"; }
   Mod+Z                               { spawn-sh "noctalia msg bar-toggle"; }
-  Mod+Alt+V                           { spawn-sh "noctalia msg panel-toggle clipboard"; }
+  Mod+V                               { spawn-sh "noctalia msg panel-toggle clipboard"; }
   Mod+Shift+P                         { spawn-sh "noctalia msg suspend"; }
-  Mod+Shift+Q                         {spawn-sh "noctalia msg panel-toggle session"; }
-  Mod+R                               { switch-preset-column-width; }
+  Mod+Shift+Q                         { spawn-sh "noctalia msg panel-toggle session"; }
 
   // ─── Media Controls ───
   XF86AudioRaiseVolume                allow-when-locked=true { spawn-sh "noctalia msg volume-up"; }
@@ -107,15 +108,15 @@ binds {
   Mod+TAB                             repeat=false { toggle-overview; } 
 
   // ─── Layout Controls ───
-  //Mod+D                             { expand-column-to-available-width; }
   Mod+C                               { center-column; }
+  Mod+R                               { switch-preset-column-width; }
   Mod+Minus                           { set-column-width "-10%"; }
   Mod+Equal                           { set-column-width "+10%"; }
   Mod+Shift+Minus                     { set-window-height "-10%"; }
   Mod+Shift+Equal                     { set-window-height "+10%"; }
 
   // ─── Modes ───
-  Mod+V                               { toggle-window-floating; }
+  Mod+G                               { toggle-window-floating; }
   Mod+F                               { fullscreen-window; }
   Mod+D                               { maximize-column;}
   Mod+W                               { toggle-column-tabbed-display; }
