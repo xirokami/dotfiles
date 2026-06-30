@@ -4,6 +4,7 @@ output "DP-2"{
 }
 output "eDP-1"{
   mode "1920x1080@60"
+  scale 1
   position x=2560 y=1000
 }
 output "HDMI-A-1"{

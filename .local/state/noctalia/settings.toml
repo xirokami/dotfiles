@@ -1,15 +1,64 @@
 [bar.default]
 background_opacity = 0.4999999888241291
-end = [ "tray", "spacer_2", "network", "bluetooth", "battery", "keyboard_layout", "notifications" ]
+center = [ "cpu", "ram", "temp", "sysmon" ]
+color = "secondary"
+end = [ "tray", "spacer_2", "keyboard_layout", "network", "bluetooth", "battery", "spacer_2", "clock" ]
+font_weight = 400
 margin_edge = 0
-margin_ends = 0
+margin_ends = 8
 position = "left"
-radius = 0
+radius_bottom_left = 0
 radius_top_left = 0
-start = [ "taskbar" ]
+start = [ "taskbar", "privacy" ]
+
+    [bar.default.dead_zone]
+    middle_command = "noctalia msg panel-toggle session"
 
 [brightness]
 enable_ddcutil = true
+
+[[control_center.shortcuts]]
+type = "wifi"
+
+[[control_center.shortcuts]]
+type = "bluetooth"
+
+[[control_center.shortcuts]]
+type = "nightlight"
+
+[[control_center.shortcuts]]
+type = "power_profile"
+
+[[control_center.shortcuts]]
+type = "mic_mute"
+
+[[control_center.shortcuts]]
+type = "audio"
+
+[dock]
+auto_hide = true
+reserve_space = false
+
+[hooks]
+power_profile_changed = "~/scripts/theme_change.sh"
+
+[idle]
+behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
+
+    [idle.behavior.lock]
+    action = "lock"
+    enabled = true
+    timeout = 600
+
+    [idle.behavior.lock-and-suspend]
+    action = "lock_and_suspend"
+    enabled = false
+    timeout = 900
+
+    [idle.behavior.screen-off]
+    action = "screen_off"
+    enabled = true
+    timeout = 660
 
 [lockscreen_widgets]
 enabled = false
@@ -60,12 +109,20 @@ enabled = true
 force = true
 temperature_night = 4600
 
+[plugin_settings."noctalia/wallhaven"]
+download_dir = "~/Pictures/Wallpapers"
+
+[plugins]
+enabled = [ "noctalia/wallhaven", "noctalia/mpvpaper", "noctalia/translator" ]
+
 [shell]
-font_family = "JetBrains Mono NL"
+font_family = "JetBrainsMono NF"
 polkit_agent = true
 settings_show_advanced = true
 
     [shell.panel]
+    launcher_placement = "attached"
+    open_near_click_control_center = true
     transparency_mode = "glass"
 
     [shell.screen_corners]
@@ -73,31 +130,44 @@ settings_show_advanced = true
     size = 16
 
 [theme]
-builtin = "Kanagawa"
+builtin = "Tokyo-Night"
 community_palette = "Tokyo Night Moon"
 mode = "dark"
+source = "builtin"
+wallpaper_scheme = "m3-monochrome"
 
     [theme.templates]
-    builtin_ids = [ "gtk3", "gtk4", "kcolorscheme", "kitty", "niri", "qt" ]
-    community_ids = [ "neovim" ]
+    builtin_ids = [ "btop", "gtk3", "gtk4", "kcolorscheme", "kitty", "niri", "qt" ]
 
 [wallpaper]
 directory = "/home/xiro/Pictures/Wallpapers"
 
     [wallpaper.default]
-    path = "/home/xiro/Pictures/Wallpapers/wallhaven-yqv2wx_1920x1080.png"
+    path = "/home/xiro/Pictures/Wallpapers/926d426df02246939c5038d61a846675.jpg"
 
     [wallpaper.last]
-    path = "/home/xiro/Pictures/Wallpapers/wallhaven-yqv2wx_1920x1080.png"
+    path = "/home/xiro/Pictures/Wallpapers/926d426df02246939c5038d61a846675.jpg"
 
     [wallpaper.monitors.HDMI-A-1]
-    path = "/home/xiro/Pictures/Wallpapers/wallhaven-4v9x35_2560x1440.png"
+    path = "/home/xiro/Pictures/Wallpapers/lain.png"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/xiro/Pictures/Wallpapers/wallhaven-yqv2wx_1920x1080.png"
+    path = "/home/xiro/Pictures/Wallpapers/926d426df02246939c5038d61a846675.jpg"
+
+[weather]
+enabled = false
+
+[widget.battery]
+display_mode = "graphic"
+font_weight = 600
+hide_when_plugged = true
+scale = 0.90000000000000013
 
 [widget.clock]
 format = "{:%H:%M - %d %m}"
+
+[widget.cpu]
+show_label = false
 
 [widget.keyboard_layout]
 scale = 1.1000000000000001
@@ -106,6 +176,15 @@ show_icon = false
     [widget.keyboard_layout.custom_labels]
     "English (US)" = "us"
     Russian = "ru"
+
+[widget.network]
+show_label = false
+
+[widget.privacy]
+hide_inactive = true
+
+[widget.ram]
+show_label = false
 
 [widget.spacer_2]
 capsule_fill = "primary"
@@ -116,7 +195,21 @@ length = 0
 scale = 0.20000000000000001
 type = "spacer"
 
+[widget.sysmon]
+show_label = false
+stat = "disk_pct"
+
 [widget.taskbar]
+focused_color = "secondary"
+font_weight = 800
 group_by_workspace = true
 hide_empty_workspaces = true
+inactive_opacity = 0.80000000000000004
 show_workspace_label = false
+workspace_label_placement = "centered"
+
+[widget.temp]
+show_label = false
+
+[widget.wallhaven]
+type = "noctalia/wallhaven:wallhaven"
